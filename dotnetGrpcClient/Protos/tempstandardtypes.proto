@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcClient";
+
+package temperature;
+
+enum UnitOfTemperature{
+	NONE = 0;
+	CELSIUS = 1;
+	FAHRENHEIT = 2;
+	KELVIN = 3;
+}
+
+message TemperatureRequest {
+  UnitOfTemperature unit = 1;
+  UnitOfTemperature convertTo = 2;
+  float value = 3;
+}
+
+message TemperatureResponse {
+  float reply = 2;
+}

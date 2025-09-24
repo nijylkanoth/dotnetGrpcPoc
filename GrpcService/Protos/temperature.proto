@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "Protos/tempstandardtypes.proto";
+
+option csharp_namespace = "TemperatureGrpcService";
+
+package temperature;
+
+service Temperature {
+  rpc GetTemperature (TemperatureRequest) returns (TemperatureResponse);
+}
+
